@@ -1,12 +1,21 @@
-import '../styles/globals.css';
+import { ThemeProvider } from 'next-themes';
+import Script from 'next/script';
 
+import { Navbar, Footer } from '../components';
+import '../styles/globals.css';
 // eslint-disable-next-line react/function-component-definition
 
 const MyApp = ({ Component, pageProps }) => (
-  <div>
-    <h1>NAVBAR</h1>
-    <Component {...pageProps} />
-    <h1>FOOTER</h1>
-  </div>
+  <ThemeProvider attribute='class'>
+    <div className='dark:bg-nft-dark bg-white min-h-screen'>
+      <Navbar />
+      <Component {...pageProps} />
+      <Footer />
+    </div>
+    <Script
+      src='https://kit.fontawesome.com/42b16ae0e3.js'
+      crossOrigin='anonymous'
+    />
+  </ThemeProvider>
 );
 export default MyApp;
