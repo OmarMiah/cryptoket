@@ -149,6 +149,17 @@ const Navbar = () => {
             className={theme === 'light' && 'filter invert'}
           />
         )}
+
+        {isOpen && (
+          <div className='fixed inset-0 top-65 dark:bg-nft-dark bg-white z-10 nav-h flex justify-between flex-col'>
+            <div className='flex-1 p-4'>
+              <MenuItems active={active} setActive={setActive} isMobile />
+            </div>
+            <div className='p-4 border-t dark:border-nft-black-1 border-nft-gray-1'>
+              <ButtonGroup setActive={setActive} router={router} />
+            </div>
+          </div>
+        )}
       </div>
     </nav>
   );
