@@ -1,3 +1,4 @@
+/* eslint-disable jsx-quotes */
 import { ThemeProvider } from 'next-themes';
 import Script from 'next/script';
 
