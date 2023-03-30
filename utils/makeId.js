@@ -1,11 +1,13 @@
-export const makeId = (length) => {
-  const characters =
-    'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+export const makeid = (length) => {
+  let result = '';
 
-  let result = ' ';
-  const charLength = characters.length;
+  const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+  const charactersLength = characters.length;
+
   for (let i = 0; i < length; i += 1) {
-    result += characters.charAt(Math.floor(Math.random() * charLength));
+    result += characters.charAt(Math.floor(Math.random() * charactersLength));
   }
+
   return result;
 };
+

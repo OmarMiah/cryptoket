@@ -1,9 +1,12 @@
 import Navbar from './Navbar';
 import Footer from './Footer';
-import Button from './Button';
-import Banner from './Banner';
+import Modal from './Modal';
 import CreatorCard from './CreatorCard';
 import NFTCard from './NFTCard';
+import Loader from './Loader';
+import SearchBar from './SearchBar';
+import Button from './Button';
+import Banner from './Banner';
 import Input from './Input';
 
-export { Navbar, CreatorCard, Footer, Button, Banner, NFTCard, Input };
+export { Navbar, Footer, Modal, CreatorCard, NFTCard, Loader, SearchBar, Button, Banner, Input };
